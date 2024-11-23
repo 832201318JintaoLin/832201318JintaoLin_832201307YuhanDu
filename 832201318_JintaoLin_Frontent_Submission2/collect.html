@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电话簿</title>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+
+<div class="container">
+    <h1>电话簿</h1>
+    <button class="collect" onclick="window.location.href='index.html'">返回首页</button>
+    <table id="phonebookTable">
+        <thead>
+        <tr>
+            <th>姓名</th>
+            <th>手机号码</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody id="phonebookTbody">
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <!-- 新增的上传头像部分 -->
+        <div class="form-group">
+            <label for="imageInput">上传头像:</label>
+            <input type="file" id="imageInput" name="image" accept="image/*">
+        </div>
+        <img id="previewImage" src="" alt="预览图片"
+             style="display:none; max-width: 100%; height: auto; border-radius: 50%; margin-top: 10px;">
+        <p id="responseMessage"></p>
+
+        <div class="form-group">
+            <label for="username">姓名:</label>
+            <input type="text" id="username" name="username">
+        </div>
+        <div class="form-group">
+            <label for="phone">电话号码:</label>
+            <input type="text" id="phone" name="phone">
+        </div>
+        <div class="form-group">
+            <label for="phone1">家庭电话:</label>
+            <input type="text" id="phone1" name="phone1">
+        </div>
+        <div class="form-group">
+            <label for="email">电子邮箱:</label>
+            <input type="text" id="email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="socialmedia">社交媒体:</label>
+            <input type="text" id="socialmedia" name="socialmedia">
+        </div>
+        <div class="form-group">
+            <label for="address">真实地址:</label>
+            <input type="text" id="address" name="address">
+        </div>
+
+        <input type="hidden" id="entryId" name="entryId">
+        <button id="submit">保存</button>
+    </div>
+</div>
+<script src="js/collect.js"></script>
+
+</body>
+</html>
