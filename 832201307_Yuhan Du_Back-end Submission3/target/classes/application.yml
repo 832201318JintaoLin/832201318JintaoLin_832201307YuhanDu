@@ -1,0 +1,29 @@
+server:
+  port: 8888
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: -1
+      max-request-size: -1
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/phonebook?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+
+mybatis-plus:
+  mapper-locations: classpath*:com/example/form/**/mapper/**Mapper.xml
+  typeAliasesPackage: com.example.files.**.entity
+  global-config:
+    db-config:
+      table-underline: true
+
+
+ali:
+  oss:
+    endpoint: oss-cn-chengdu.aliyuncs.com
+    bucketName: dazhiruou-test
+    accessKeyId: LTAI5tFGUB8KAkot1QWJxd4y
+    accessKeySecret: l63cpWcb0P4oyWUj2UhK7ZIKvSXtMz
+    address: https://dazhiruou-test.oss-cn-chengdu.aliyuncs.com/
